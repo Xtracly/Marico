@@ -220,7 +220,6 @@ body {
     justify-content: center;
     gap: 0.56rem;
     align-items: center;
-    padding-bottom: 11.75rem;
 }
 
 .header__number {
@@ -573,17 +572,20 @@ body {
 }
 
 .gratitude__inner {
-    padding-bottom: 12rem;
 }
 
 .gratitude__main {
-    position: relative;
+    display: grid;
+    place-items: center center;
+}
+
+.gratitude__image {
+    width: 100%;
+    object-fit: cover;
 }
 
 .gratitude__title {
     position: absolute;
-    top: 11.313rem;
-    left: 13.4rem;
     color: #FFF;
     text-align: center;
     font-size: 4rem;
@@ -593,9 +595,16 @@ body {
     line-height: 6.5625rem;
 }
 
+
+
 .start__image {
     display: flex;
     justify-content: center;
+}
+
+.start__inner {
+    padding-top: 8rem;
+    padding-bottom: 11.75rem;
 }
 
 .start__button {
@@ -1323,6 +1332,13 @@ input {
     .share__collect {
         
     }
+    .gratitude__heading {
+        top: 21.563rem;
+        font-size: 3rem;
+    }
+    .gratitude__title {
+
+    }
 }
 
 @media screen and (max-width: 1240px) {
@@ -1355,7 +1371,6 @@ input {
     }
 
     .header__create {
-        gap: 1.5rem;
         padding-bottom: 5rem;
     }
 
@@ -1443,9 +1458,6 @@ input {
     }
 
     .section__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .section__button {
@@ -1486,10 +1498,8 @@ input {
     }
 
     .gratitude__title {
-        font-size: 3rem;
+        font-size: 2.8rem;
         line-height: 6rem;
-        top: 6rem;
-        left: 9rem;
     }
 
     .send__inner {
@@ -1692,17 +1702,52 @@ input {
     .nav__list.nav__list--active {
         transform: translateY(0);
     }
+
+    .gratitude__title {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
 }
 
 
 
 @media screen and (max-width: 860px) {
-
+    .header__title {
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+    }
+    .header__text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .gratitude__title {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
+    .header__title {
+        font-size: 3.1rem;
+        line-height: 5.1rem;
+    }
+    .header__text {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
     .section__title {
         font-size: 2.3rem;
+    }
+
+    .section__desc {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    .section__list-desc {
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
 
     .plan__list-title {
@@ -1717,6 +1762,9 @@ input {
 
     }
 
+    .gratitude__title {
+
+    }
 
     .footer__main {
         padding-bottom: 2rem;
@@ -1743,24 +1791,49 @@ input {
     .footer__list-item {
 
     }
+
 }
 
 @media screen and (max-width: 728px) {
+
     .section__title {
         font-size: 2.1rem;
     }
+
     .section__text {
         font-size: 1.8rem;
+        text-align: center;
     } 
+
+    .gratitude__title {
+    }
 }
 
 @media screen and (max-width: 660px) {
+    .header__title {
+        font-size: 2.8rem;
+        line-height: 4.8rem;
+    }
+    .header__text {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
     .section__title {
         font-size: 1.9rem;
         text-align: center;
     }
     .section__text {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .section__desc {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+    }
+
+    .section__list-desc {
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
 
     .content__title {
@@ -1774,10 +1847,8 @@ input {
     }
 
     .gratitude__title {
-        font-size: 2rem;
-        line-height: 3rem;
-        top: 65px;
-        left: 35px;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
     }
 
     .mission__about {
@@ -1836,6 +1907,22 @@ input {
         top: 5px;
     }
 
+    .start__inner {
+        padding-bottom: 6rem;
+    }
+
+    .header__number {
+        font-size: 1.2rem;
+    }
+
+    .header__summary {
+        font-size: 1.4rem;
+    }
+
+    .header__create {
+        padding-bottom: 2rem;
+    }
+
     .footer__main {
         padding-bottom: 2rem;
     }
@@ -1865,6 +1952,16 @@ input {
 }
 
 @media screen and (max-width: 588px) {
+    .header__title {
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+    }
+
+    .header__text {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+
     .username__image{
         position: relative;
         left: 227px;
@@ -1882,14 +1979,30 @@ input {
         left: 227px;
         top: -43px;
     }
-}
+    .section__button {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .section__list-item {
+        flex-direction: column;
+    }
+    .section__list-desc {
+        text-align: center;
+    }
+} 
 
 @media screen and (max-width: 550px) {
 
     .header__title {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 4rem;
         text-align: center;
+    }
+
+    .header__text {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
     }
 
     .header__caption {
@@ -1973,10 +2086,8 @@ input {
     }
 
     .gratitude__title {
-        font-size: 1.8rem;
-        line-height: 3rem;
-        top: 46px;
-        left: 10px;
+        font-size: 1.3rem;
+        line-height: 2.3rem;
     }
 
     .header__summary {
@@ -2033,6 +2144,18 @@ input {
         top: 3px;
     }
 
+    .header__create {
+        padding-bottom: 2rem;
+    }
+
+    .header__number {
+        
+    }
+
+    .header__summary {
+        font-size: 1rem;
+    }
+
     .footer__main {
         padding-bottom: 2rem;
     }
@@ -2062,13 +2185,42 @@ input {
 }
 
 @media screen and (max-width: 440px) {
-    
-    .section__title {
+    .header__title {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
 
+    .header__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+        line-height: 3rem;
     }
 
     .section__text {
         font-size: 1.2rem;
+    }
+
+    .create__smile-title {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .section__heading {
+
+    }
+
+    .section__list-desc {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .gratitude__title {
+        font-size: 1.1rem;
+        line-height: 2.1rem;
     }
 
     .form {
@@ -2118,6 +2270,10 @@ input {
         left: 155px;
         top: -45px;
     }
+
+    .header__summary {
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -2125,16 +2281,23 @@ input {
     .header__caption {
         padding-bottom: 1rem;
     }
+
     .header__title {
-        font-size: 2.5rem;
-        line-height: 5rem;
-        text-align: center;
+        font-size: 1.5rem;
+        line-height: 3rem;
     }
+
+    .header__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
     .section__title {
         font-size: 1.5rem;
         text-align: center;
-        line-height: 4rem;
+        line-height: 3rem;
     }
+
     .section__text {
         font-size: 0.9rem;
     }
@@ -2150,12 +2313,9 @@ input {
     }
 
     .section__list-item {
-        flex-direction: column;
     }
 
     .section__list-desc {
-        font-size: 1rem;
-        text-align: center;
     }
 
     .section__button {
@@ -2197,7 +2357,7 @@ input {
     }
 
     .header__summary {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .team__main {
@@ -2213,10 +2373,12 @@ input {
     }
 
     .gratitude__title {
+
+    }
+
+    .gratitude__title {
         font-size: 1rem;
         line-height: 2rem;
-        left: 30px;
-        top: 35px;
     }
 
     .content__inner {
