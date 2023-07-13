@@ -1,9 +1,6 @@
-// Отримуємо посилання на кнопку меню та список навігації
-const menuBtn = document.querySelector('.menu__btn');
-const navList = document.querySelector('.nav__list');
-
-// Додаємо обробник події кліку на кнопку меню
-menuBtn.addEventListener('click', function() {
-  // Змінюємо клас списку навігації для відображення/приховування
-    navList.classList.toggle('nav__list--active');
+$(function(){
+  $('.menu__btn').on('click', function () { // Отримуємо посилання на кнопку меню та список навігації
+    $('.menu__btn').toggleClass('nav__list--active'); // Додаємо обробник події кліку на кнопку меню
+    $('.nav__list').slideToggle(); // Змінюємо клас списку навігації для відображення/приховування
+  });
 });
